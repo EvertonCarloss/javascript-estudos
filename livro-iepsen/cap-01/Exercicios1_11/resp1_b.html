@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elaborar um programa para uma pizzaria</title>
+</head>
+
+<body>
+
+  <!--  Elaborar um programa para uma pizzaria, o qual leia o valor total de
+  uma conta e quantos clientes vão pagá-la. Calcule e informe o valor a ser
+  pago por cliente.
+
+  Exemplo:
+
+  Valor da Conta R$: 90.00
+  Número de Clientes: 3
+  Valor por cliente R$: 30.00 -->
+
+  <script>
+
+    alert("Bem vindo a Pizzaria!")
+
+    // Entrada do valor total
+    const valorTotal = Number(prompt("Valor total da conta R$: "))
+    const quantidadeCliente = Number(prompt("Quantas pessoas: "))
+
+    // Processando o valor para cada pessoa;
+    const valorPago = valorTotal / quantidadeCliente;
+
+    // Saída;
+    alert(`Valor da Conta R$: ${valorTotal.toFixed(2)}\nNúmero de Clientes: ${quantidadeCliente}\nValor por cliente R$: ${valorPago.toFixed(2)}`)
+
+  </script>
+
+
+</body>
+
+</html>
