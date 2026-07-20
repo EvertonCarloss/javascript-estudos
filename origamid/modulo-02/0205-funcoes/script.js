@@ -64,3 +64,51 @@ function imcDois(peso, altura) {
 }
 imcDois(80, 1.8); // Retorna o imc;
 console.log(imcDois(80, 1.8)); // Retorna o imc e undefined;
+
+/* VALORES RETORNADOS - Uma função pode retornar qualquer tipo de dado e até outras funções */
+
+function terceiraIdade(idade) {
+  if (typeof idade !== 'number') {
+    return `Informe a sua idade`;
+  } else if (idade >= 60) {
+    return true;
+  } else {
+    return false;
+  }
+}
+// Cuidado, retornar diferentes tipos de dados na mesma função não é uma boa ideia.
+
+/* ESCOPO - Variáveis e funções definidas dentro de um bloco {}, não são visíveis fora dela*/
+
+function precisoVisitar(paisesVisitados) {
+  let totalPaises = 193;
+  return `Ainda falta visitar ${totalPaises - paisesVisitados} paises para visitar`;
+}
+// console.log(totalPaises); // Erro, totalPaises não foi definido;
+
+/* ESCOPO LÉXICO - Funções conseguem acessar variáveis que foram criadas no contexto PAI */
+
+let profissao = 'Designer';
+
+function dados() {
+  let nome = 'Everton';
+  let idade = 28;
+  function outrosDados() {
+    let endereco = 'Rio de Janeiro';
+    let idade = 30;
+    return `${nome}, ${idade}, ${endereco}, ${profissao}`;
+  }
+  return outrosDados();
+}
+
+console.log(dados()); // Retorna "Everton, 29, Rio de Janeiro, Designer"
+// outrosDados(); // Retorna um erro
+
+/* HOISTING -  Antes de executar uma função, o JS "Move" todas as funções declaradas para a memória */
+
+imcTres(100, 1.8);
+
+function imcTres(peso, altura) {
+  const imc = peso / altura ** 2;
+  console.log(imc);
+}
