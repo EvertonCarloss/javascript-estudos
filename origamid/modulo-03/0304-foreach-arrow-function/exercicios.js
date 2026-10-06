@@ -8,15 +8,15 @@ paragrafo.forEach((i) => console.log(i.innerText));
 
 /* EXERCÍCIO 3 - Como corrigir os erros abaixos: */
 
-const imgs = document.querySelectorAll('img');
+const imagens = document.querySelectorAll('img');
 
-imgs.forEach((item, index) => {
+imagens.forEach((item, index) => {
   console.log(item, index);
 });
 
-let i = 0;
-imgs.forEach(() => {
+let iTres = 0;
+imagens.forEach(() => {
   console.log(i++);
 });
 
-imgs.forEach(() => i++);
+imagens.forEach(() => i++);
