@@ -1,30 +1,23 @@
-// getElementByID - Seleciona e retorna elementos do DOM;
+// Retorne no console todas as imagens do site
+const img = document.querySelectorAll('img');
+console.log(img);
 
-// Seleciona pelo ID
-const animaisSection = document.getElementById('animais');
-// Saída;
-console.log(animaisSection);
-const contatoSection = document.getElementById('contato');
-// Saída;
-console.log(contatoSection);
+// Retorne no console apenas as imagens que começaram com a palavra imagem
+const imagensAnimais = document.querySelectorAll('img[src^="img/imagem"]');
+console.log(imagensAnimais);
 
-// Retorna null caso não exista;
-const naoExiste = document.getElementById('test');
+// Selecione todos os links internos (onde o href começa com #)
+const linksInterno = document.querySelectorAll('[href^="#"]');
+console.log(linksInterno);
 
-/* CLASSE E TAG - getElementsByClassName e getElementsByTagName, selecionam e retornam uma lista de elementos do DOM. A lista retornada está ao vivo, significa que se elementos forem adicionados, ela será automaticamente atualizada.*/
+// Selecione o primeiro h2 dentro de .animais-descricao
+const animais = document.querySelector('.animais-descricao');
+const h2Animais = animais.querySelector('h2');
 
-// Seleciona pela classe, retorna uma HTMLCollection;
-const gridSection = document.getElementsByClassName('grid-section');
-const contato = document.getElementsByName('grid-section contato');
+console.log(animais);
+console.log(h2Animais);
 
-// Seleciona todas as UL's, retorna uma HtmlCollection;
-const ul = document.getElementsByTagName('ul');
+// Selecione o último p do site
+const paragrafos = document.querySelectorAll('p');
 
-// Retorna o primeiro elemento;
-console.log(gridSection[0]);
-
-/* SELETOR GERAL ÚNICO - querySelector - Retorna o primeiro elemento que combinar com o seu seletor CSS. */
-const animas = document.querySelector('.animais');
-
-/* SELETOR GERAL LISTA - querySelectorAll - Retorna todos os elementos compatíveis com o seletor CSS em uma NodeList */
-const animaisDois = document.querySelectorAll('.grid-section');
+console.log(paragrafos[--paragrafos.length]);
